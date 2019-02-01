@@ -14,7 +14,6 @@ import { HomePage } from '../home/home';
 export class LoginPage {
 	loginForm: FormGroup;
 	loginError: string;
-	currentEmail: any;
 	constructor(
 		private navCtrl: NavController,
 		private auth: AccountService,
@@ -33,7 +32,6 @@ export class LoginPage {
 
 			return;
 		}
-		this.currentEmail = data.email;
 		let credentials = {
 			email: data.email,
 			password: data.password

@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPageComponent } from '../pages/registration/registration';
 import firebase from 'firebase';
@@ -23,8 +22,6 @@ export class MyAppComponent {
   verified: boolean;
   //email of logged user
   loggedEmail: String;
-  //type of logged user
-  userType: String;
   //list of pages
   pages: Array<{ title: string, component: any }>;
 
@@ -37,7 +34,6 @@ export class MyAppComponent {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
       { title: 'Login', component: LoginPage },
       { title: 'Registrazione', component: RegistrationPageComponent }
     ];
@@ -68,14 +64,14 @@ export class MyAppComponent {
             if (user.emailVerified == true) {
 
               this.verified = true;
-              this.userIsLogged(user, this.verified);
+              this.userIsLogged(this.verified);
             }
 
             //user logged & not verified
             else {
 
               this.verified = false;
-              this.userIsLogged(user, this.verified);
+              this.userIsLogged(this.verified);
             }
           }  
             
@@ -89,63 +85,27 @@ export class MyAppComponent {
       );
   }
 
-  userIsLogged(user, verified) {
+  userIsLogged(verified) {
 
     this.rootPage = HomePage;
     this.loggedEmail = firebase.auth().currentUser.email;
 
-    //check the type of logged user
-    this.accountService.getTypeAccount("Account", user.email)
-    .then(
-      type => {
-
-        //tutor & verified
-        if (type == "tutor" && verified == true) {
-
-          this.userType = "Tutor Account";
-
-          this.pages = [
-            { title: 'Home', component: HomePage },
-         
-          ];
-        }
-
-        //tutor & not verified
-        else if (type == "tutor" && verified == false) {
-
-          this.userType = "Tutor Account";
-
-          this.pages = [
-            { title: 'Home', component: HomePage },
-          ];
-        }
+  
         
-        //student & verified
-        else if (type == "student" && verified == true) {
-
-          this.userType = "Student Account";
+        //verified
+        if (verified == true) {
 
           this.pages = [
             { title: 'Home', component: HomePage },
           ];
         }
 
-        //student & not verified
-        else if (type == "student" && verified == false) {
-          
-          this.userType = "Student Account";
+        //not verified
+        else if (verified == false) {
 
           this.pages = [
             { title: 'Home', component: HomePage },
           ];
-        }
-
-        //admin
-        else if (type == "admin") {
-
-          this.userType = "Admin Account";
-
-          this.pages = [];
         }
 
         //error
@@ -154,16 +114,15 @@ export class MyAppComponent {
           this.userIsNotLogged();
           this.logout();
         }
-      },
-    );
-  }
+      }
+ 
+
 
   userIsNotLogged() {
 
     this.rootPage = LoginPage;
     this.verified = false;
     this.loggedEmail = "Guest@erasmussmart.org";
-    this.userType = "Guest Account";
         
     this.pages = [
       { title: 'Login', component: LoginPage},
@@ -180,8 +139,6 @@ export class MyAppComponent {
     this.logged = false;
     this.verified = false;
     this.loggedEmail = "Guest@erasmussmart.org";
-    this.userType = "Guest Account";
-    
     this.nav.popToRoot;
   }
 

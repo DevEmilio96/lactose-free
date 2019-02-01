@@ -79,50 +79,6 @@ lettera.
 					</ion-row>
 			 	</ion-grid>
 
-				<ion-item class="boxFormItem">
-					<ion-label color="es_white">Data di nascita</ion-label>
-					<ion-input id="date" type="date" name="birthDay" required formControlName="birthDay"></ion-input>
-				</ion-item>
-				<div class="error" *ngIf="form.get('birthDay').hasError('required') && form.get('birthDay').touched" style="color: red; padding-top: 0.2rem">
-					Campo obbligatorio
-				</div>
-				<div class="error" style="color: red; padding-top: 0.2rem">
-					{{ errorMessageBirthDay }}
-				</div>
-				
-				<ion-item class="boxFormItem">
-					<ion-label color="es_white">Luogo di Nascita</ion-label>
-					<ion-input id="place" type="text" name="birthPlace" required formControlName="birthPlace"></ion-input>
-				</ion-item>
-				<div class="error" *ngIf="form.get('birthPlace').hasError('required') && form.get('birthPlace').touched" style="color: red; padding-top: 0.2rem">
-					Campo obbligatorio
-				</div>
-				<div class="error" *ngIf="form.get('birthPlace').hasError('maxlength') && form.get('birthPlace').touched" style="color: red; padding-top: 0.2rem">
-					Massimo 16 caratteri
-				</div>
-				<div class="error" *ngIf="form.get('birthPlace').hasError('pattern') && form.get('birthPlace').touched" style="color: red; padding-top: 0.2rem">
-					Utilizzare solo lettere
-				</div>
-				<div class="error" style="color: red; padding-top: 0.2rem">
-					{{ errorMessageBirthPlace }}
-				</div>
-				
-				<ion-item class="boxFormItem">
-					<ion-label color="es_white">Codice Fiscale</ion-label>
-					<ion-input id="cf" type="text" name="fiscalCode" formControlName="fiscalCode" require></ion-input>
-				</ion-item>
-				<div class="error" *ngIf="form.get('fiscalCode').hasError('required') && form.get('fiscalCode').touched" style="color: red; padding-top: 0.2rem">
-					Campo obbligatorio
-				</div>
-				<div class="error" style="color: red; padding-top: 0.2rem">
-					{{ errorMessageCF }}
-				</div>
-				<div class="error" *ngIf="form.get('fiscalCode').hasError('maxlength') && form.get('fiscalCode').touched" style="color: red; padding-top: 0.2rem">
-					Massimo 16 caratteri
-				</div>
-				<div class="error" *ngIf="form.get('fiscalCode').hasError('pattern') && form.get('fiscalCode').touched" style="color: red; padding-top: 0.2rem">
-					Utilizzare solo lettere e numeri
-				</div>
 
 				</ion-list>
 			</ion-col>
@@ -133,27 +89,6 @@ lettera.
 
 				<ion-list-header class="boxFormHeader">Dati Utente</ion-list-header>
 					
-				<ion-item class="boxFormItem">
-				  <ion-label color="es_white">Tipo Account</ion-label>
-				</ion-item>
-		  
-				<ion-grid class="boxFormRadioGrid" radio-group ng-controller="accountTypeController" formControlName="userType">
-				  <ion-row>
-				  <ion-col col-2>
-					<div class="boxFormRadioDiv">Studente</div>
-				  </ion-col>
-				  <ion-col col-3>
-					<ion-radio value="student" ng-model="accountType" checked="true" color="es_white"></ion-radio>
-				  </ion-col>
-					  
-				  <ion-col col-2>
-					<div class="boxFormRadioDiv">Docente</div>
-				  </ion-col>
-				  <ion-col col-1>
-					<ion-radio value="tutor" ng-model="accountType" color="es_white"></ion-radio>
-				  </ion-col>
-				  </ion-row>
-				</ion-grid>
 
 				<ion-item class="boxFormItem">
 					<ion-label color="es_white">E-Mail</ion-label>
@@ -217,43 +152,3 @@ lettera.
 <ion-footer>
 	<footer-es></footer-es>
 </ion-footer>
-
-
-<!--Parte di Emilio-->
-<!--
-<ion-header>
-<ion-navbar>
-  <ion-title>Sign up</ion-title>
-</ion-navbar>
-</ion-header>
-
-<ion-content>
-
-<form (ngSubmit)="signup()" [formGroup]="form">
-  <ion-list inset>
-
-    <ion-item [ngClass]="{ invalid: emailErrors }">
-      <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
-    </ion-item>
-
-    <div ngxErrors="email" #emailErrors="ngxErrors">
-      <div [ngxError]="['email', 'required']" [when]="['touched']">It should be a valid email</div>
-    </div>
-
-    <ion-item [ngClass]="{ invalid: passwordErrors }">
-      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
-    </ion-item>
-
-      <div ngxErrors="password" #passwordErrors="ngxErrors">
-      <div [ngxError]="['minlength', 'required']" [when]="['touched']">It should be at least 6 characters</div>
-    </div>
-  </ion-list>
-
-  <div padding-horizontal>
-    <div class="form-error">{{signupError}}</div>
-
-    <button ion-button full type="submit" [disabled]="!form.valid">Sign up</button>
-  </div>
-</form>
-</ion-content>
--->
