@@ -20,6 +20,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegistrationPageComponent } from '../pages/registration/registration';
 import { AccountService } from '../providers/service/accountService';
 import { ENV } from '../config/env';
+
 @NgModule({
   declarations: [
     MyAppComponent,
@@ -28,6 +29,7 @@ import { ENV } from '../config/env';
     RegistrationPageComponent,
     HeaderEsComponent,
     FooterEsComponent,
+
   ],
   imports: [
     BrowserModule,

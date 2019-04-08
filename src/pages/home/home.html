@@ -1,18 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h1> PROVAAAAAAA </h1>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-tabs>
+    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Immagini" tabIcon="images"></ion-tab>
+    <ion-tab [root]="tab3Root" tabTitle="Ricette" tabIcon="book"></ion-tab>
+    <ion-tab [root]="tab4Root" tabTitle="Cerca" tabIcon="search"></ion-tab>
+  </ion-tabs>
+  <!--<ion-tabs>
+      <ion-tab [root]="login" tabTitle="Chat" tabIcon="chat"></ion-tab>
+     </ion-tabs>-->
 </ion-content>
