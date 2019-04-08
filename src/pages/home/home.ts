@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegistrationPageComponent } from '../registration/registration';
+import { RecipesPageComponent } from '../recipes/recipes';
 
 @Component({
   selector: 'page-home',
@@ -10,7 +11,7 @@ import { RegistrationPageComponent } from '../registration/registration';
 export class HomePage {
   tab1Root = LoginPage;
   tab2Root = RegistrationPageComponent;
-  //tab3Root = Ricette;
+  tab3Root = RecipesPageComponent;
   //tab4Root = Cerca;
 
 

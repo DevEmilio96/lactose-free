@@ -20,6 +20,8 @@ import { LoginPage } from '../pages/login/login';
 import { RegistrationPageComponent } from '../pages/registration/registration';
 import { AccountService } from '../providers/service/accountService';
 import { ENV } from '../config/env';
+import { RecipesPageComponent } from '../pages/recipes/recipes';
+import { RecipesProvider } from '../providers/service/recipesService';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ENV } from '../config/env';
     RegistrationPageComponent,
     HeaderEsComponent,
     FooterEsComponent,
+    RecipesPageComponent,
 
   ],
   imports: [
@@ -44,7 +47,8 @@ import { ENV } from '../config/env';
     MyAppComponent,
     HomePage,
     LoginPage,
-    RegistrationPageComponent
+    RegistrationPageComponent,
+    RecipesPageComponent
   ],
   providers: [
     AngularFireAuth,
@@ -53,6 +57,7 @@ import { ENV } from '../config/env';
     StatusBar,
     SplashScreen,
     Firebase,
+    RecipesProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
