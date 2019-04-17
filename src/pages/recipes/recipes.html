@@ -4,30 +4,56 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+
 
 	<ion-header>
     <header-es [title]="title"></header-es>
-    <h1 style="text-align:center">Ricette</h1>
 	</ion-header>
 
-</ion-header>
+  <ion-content>
+      <ion-card>
+          <ion-card-header>
+            <h1 class= "titolo" style="text-align:center; color:#863095;" > RICETTE </h1>
+          </ion-card-header>
+        </ion-card>
 
-
-<ion-content padding>
-  
-  
-      <h1 *ngFor="let location of locations"> {{ location.recipeName }} </h1>
-
-      
+      <ion-list>  
+      <ion-item *ngFor="let location of locations">
 <!--
-      <ion-thumbnail item-left>
-        <img src="{{recipe.thumbnailImageUrl}}" id="{{recipe.id}}" text="{{recipe.text}}" />
-      </ion-thumbnail>
-    -->
-
-
-</ion-content>
+        <h1> {{ location.recipeName }} </h1>      
+        <img src= "{{ location.urlImmagine }}" width="42" height="42"  /> 
+      -->
+        <ion-thumbnail class="bord-img" item-left>
+            <img class="ricette" src="{{ location.urlImmagine }}" />
+          </ion-thumbnail>
+          <div class="contenitoreGen">
+          <div class="contenitoreName"> 
+            <h2 class="recipe-name">{{location.recipeName}}</h2>
+          </div>
+         </div>
+          <div class=contenitoreDesc>
+              <textarea  style="overflow: hidden;" class="recensione-form" rows="1" maxLength="1000" readonly> {{location.descrizione}}</textarea>
+          </div>
+          <div class=contenitoreInfo>
+          <span class="cooking-time">Tempo di preparazione:</span>
+          <span class="cooking-time-value"> {{location.recipeTime}} min</span>
+          <br>
+          <span class="cooking-time">Difficoltà:</span>
+          <span class="cooking-time-value" *ngIf = changeColorEasy(location.difficolta) style = "color: green" > {{location.difficolta}} </span>
+          <span class="cooking-time-value" *ngIf = changeColorMedium(location.difficolta) style = "color: orange" > {{location.difficolta}} </span>
+          <span class="cooking-time-value" *ngIf = changeColorHard(location.difficolta) style = "color: red" > {{location.difficolta}} </span>
+        </div>
+        <!--
+           {{location.descrizione}}
+          <table class= cointer-list>
+            <tr *ngFor="let i of location.Ingredienti">
+             <td load="splitArray(i)"> {{ i }} </td>
+             </tr>
+          </table>
+          -->
+      </ion-item>
+    </ion-list>
+  </ion-content> 
 
 
 
