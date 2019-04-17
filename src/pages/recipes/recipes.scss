@@ -1,3 +1,51 @@
 page-recipes {
+    .fixed-content {
+        background-color: cornflowerblue;
+    }
+    .recipe-name{
+        color: color($colors, primary, base);
+        font-weight: bold;
+        font-size: 22pt;
+        font-family: ultra_regular,Georgia,serif;
+    }
+    .cooking-time{
+        color: color($colors, dark, base);
+        font-size: 10pt;
+        font-weight: bold;
+        display:inline;
+    }
+    .cooking-time-value{
+        color: color($colors, dark, base);
+        font-size: 10pt;
+    }
+    .bord-img{
+        border: 3px solid cornflowerblue;
+        box-shadow: 10px 10px 5px #dedede;
+        
+    }
+    .ricette { 
+        padding: 15px;
+        width : 300px !important ;
+        height : 200px !important;
+      }
+    .recensione-form{
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        resize: none;
+        background: white;
 
+        width: 100%;
+        height: 100px ;
+        font-family: cursive;
+        font-size: 90%;
+        overflow:auto !important;
+    }
+    .input-wrapper{
+        margin-left: 1%;
+    }
+    .titolo{
+        font-size:50px;
+        font-family: ultra_regular,Georgia,serif;
+    }
 }

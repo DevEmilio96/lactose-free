@@ -41,9 +41,10 @@ export class RecipesProvider {
     //this.DBistance = firebase.firestore();
 
     this.DBistance = SingletonDatabase.getInstance();
-
-  }
-
+  
+    // per risolvere l'errore
+        this.DBistance.settings({ timestampsInSnapshots: true });
+    }
 
   // 
 
@@ -61,8 +62,15 @@ export class RecipesProvider {
             .forEach((doc: any) => {
               obj.push({
                 id: doc.id,
+                Ingredienti: doc.data().Ingredienti,
+                descrizione: doc.data().descrizione,
+                difficolta: doc.data().difficolta,
+                dosi: doc.data().dosi,
+                preparazione: doc.data().preparazione,
                 recipeName: doc.data().recipeName,
-                recipesText: doc.data().text,
+                recipeTime: doc.data().time,
+                urlImmagine: doc.data().urlImmagine,
+               
               });
             });
 
