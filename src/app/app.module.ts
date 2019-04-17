@@ -19,6 +19,7 @@ import { FooterEsComponent } from '../components/footer-es/footer-es'
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPageComponent } from '../pages/registration/registration';
 import { AccountService } from '../providers/service/accountService';
+import { GalleriaPageComponent } from '../pages/galleria/galleria';
 import { ENV } from '../config/env';
 import { RecipesPageComponent } from '../pages/recipes/recipes';
 import { RecipesProvider } from '../providers/service/recipesService';
@@ -29,6 +30,7 @@ import { RecipesProvider } from '../providers/service/recipesService';
     HomePage,
     LoginPage,
     RegistrationPageComponent,
+    GalleriaPageComponent,
     HeaderEsComponent,
     FooterEsComponent,
     RecipesPageComponent,
@@ -48,7 +50,8 @@ import { RecipesProvider } from '../providers/service/recipesService';
     HomePage,
     LoginPage,
     RegistrationPageComponent,
-    RecipesPageComponent
+    GalleriaPageComponent,
+    RegistrationPageComponent
   ],
   providers: [
     AngularFireAuth,

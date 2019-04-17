@@ -1,5 +1,7 @@
 {
   "name": "erasmus-smart",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
