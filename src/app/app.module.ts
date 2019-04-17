@@ -23,6 +23,7 @@ import { GalleriaPageComponent } from '../pages/galleria/galleria';
 import { ENV } from '../config/env';
 import { RecipesPageComponent } from '../pages/recipes/recipes';
 import { RecipesProvider } from '../providers/service/recipesService';
+import { CercaPageComponent } from '../pages/cerca/cerca'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { RecipesProvider } from '../providers/service/recipesService';
     HeaderEsComponent,
     FooterEsComponent,
     RecipesPageComponent,
+    CercaPageComponent
 
   ],
   imports: [
@@ -51,7 +53,8 @@ import { RecipesProvider } from '../providers/service/recipesService';
     LoginPage,
     RegistrationPageComponent,
     GalleriaPageComponent,
-    RegistrationPageComponent
+    RecipesPageComponent,
+    CercaPageComponent
   ],
   providers: [
     AngularFireAuth,

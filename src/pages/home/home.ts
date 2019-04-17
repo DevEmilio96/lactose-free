@@ -4,6 +4,7 @@ import { LoginPage } from '../login/login';
 import { RegistrationPageComponent } from '../registration/registration';
 import { RecipesPageComponent } from '../recipes/recipes';
 import { GalleriaPageComponent } from '../galleria/galleria';
+import { CercaPageComponent } from '../cerca/cerca';
 
 @Component({
   selector: 'page-home',
@@ -11,11 +12,9 @@ import { GalleriaPageComponent } from '../galleria/galleria';
 })
 export class HomePage {
   tab1Root = LoginPage;
-  tab2Root = RegistrationPageComponent;
   tab3Root = RecipesPageComponent;
   tab2Root = GalleriaPageComponent;
-  //tab3Root = Ricette;
-  //tab4Root = Cerca;
+  tab4Root = CercaPageComponent;
 
 
   constructor(public navCtrl: NavController) {
