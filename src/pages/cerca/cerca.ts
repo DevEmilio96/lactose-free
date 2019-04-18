@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CercaService } from '../../providers/service/CercaService';
 
 /**
  * Generated class for the CercaPage page.
@@ -14,12 +15,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'cerca.html',
 })
 export class CercaPageComponent {
+  locations: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              private DBistance: CercaService ) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CercaPage');
+  ionViewDidEnter() {
+    console.log('ionViewDidLoad RecipesPage');
+    this.retrieveCollectionProducs();
   }
+
+  retrieveCollectionProducs(): void {
+    this.DBistance.getProducs("Producs")
+       .then((data) => {
+
+          this.locations = data;
+       })
+       .catch();
+ }
+
 
 }

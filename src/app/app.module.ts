@@ -23,7 +23,8 @@ import { GalleriaPageComponent } from '../pages/galleria/galleria';
 import { ENV } from '../config/env';
 import { RecipesPageComponent } from '../pages/recipes/recipes';
 import { RecipesProvider } from '../providers/service/recipesService';
-import { CercaPageComponent } from '../pages/cerca/cerca'
+import { CercaPageComponent } from '../pages/cerca/cerca';
+import { CercaService } from '../providers/service/CercaService'
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { CercaPageComponent } from '../pages/cerca/cerca'
     SplashScreen,
     Firebase,
     RecipesProvider,
+    CercaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
