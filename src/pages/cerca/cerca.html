@@ -11,8 +11,28 @@
   </ion-navbar>
 
 </ion-header>
-
+<!-- -->
 
 <ion-content padding>
+  <form [formGroup]='form' (ngSubmit)='searchProduct(form.value)' (ngSubmit)='presentAlert()' class="form">
 
+    <ion-item>
+      <ion-label floating color="primary"> Cerca un prodotto e controlla se contiene lattosio </ion-label>
+      <ion-input type="text" class="form-controll" formControlName='Titolo' [(ngModel)]='Titolo'></ion-input>
+    </ion-item>
+
+  </form>
+  <table class="blueTable"  *ngIf = "tableCheck">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Lattosio</th>
+      </tr>
+    </thead>
+
+    <tr *ngFor='let k of lunghezzaElementiCercati'>
+      <td>{{this.tempnome[k]}}</td>
+      <td>{{this.tempintolleranza[k]}}</td>
+    </tr>
+  </table>
 </ion-content>

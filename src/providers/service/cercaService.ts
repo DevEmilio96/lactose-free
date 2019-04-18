@@ -13,10 +13,10 @@ export class CercaService {
     console.log('Hello DatabaseProvider Provider');
 
     this.DBistance = SingletonDatabase.getInstance();
-  
 
-        this.DBistance.settings({ timestampsInSnapshots: true });
-    }
+
+    this.DBistance.settings({ timestampsInSnapshots: true });
+  }
 
 
   getProducs(collectionObj: string): Promise<any> {
@@ -31,7 +31,7 @@ export class CercaService {
                 id: doc.id,
                 nome: doc.data().nome,
                 intolleranza: doc.data().intolleranza,
-  
+
               });
             });
 
@@ -54,6 +54,6 @@ export class CercaService {
     })
   }
 
-  
+
 
 }
