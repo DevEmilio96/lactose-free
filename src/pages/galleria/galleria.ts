@@ -14,6 +14,7 @@ import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular'
   templateUrl: 'galleria.html',
 })
 export class GalleriaPageComponent {
+  title: string = "Galleria";
   immagine:string;
   descrizione: string;
 itemsettage1 : Array<any> = [

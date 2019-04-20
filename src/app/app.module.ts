@@ -25,6 +25,7 @@ import { RecipesPageComponent } from '../pages/recipes/recipes';
 import { RecipesProvider } from '../providers/service/recipesService';
 import { CercaPageComponent } from '../pages/cerca/cerca'
 import { GoRecipesPageComponent } from '../pages/go-recipes/go-recipes';
+import { CercaService } from '../providers/service/CercaService'
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { GoRecipesPageComponent } from '../pages/go-recipes/go-recipes';
     SplashScreen,
     Firebase,
     RecipesProvider,
+    CercaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
