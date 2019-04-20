@@ -13,7 +13,8 @@
   <ion-content>
       <ion-card>
           <ion-card-header>
-            <h1 class= "titolo" style="text-align:center; color:#863095;" > RICETTE </h1>
+          
+            <h1 class= "titolo" style="text-align:center; color:#f4511e;" > RICETTE </h1>
           </ion-card-header>
         </ion-card>
 
@@ -21,7 +22,7 @@
       <ion-item *ngFor="let location of locations">
 <!--
         <h1> {{ location.recipeName }} </h1>      
-        <img src= "{{ location.urlImmagine }}" width="42" height="42"  /> 
+        <img src= "{{ location.urlImmagine }}" width="42" height="42"    /> 
       -->
         <ion-thumbnail class="bord-img" item-left>
             <img class="ricette" src="{{ location.urlImmagine }}" />
@@ -42,19 +43,13 @@
           <span class="cooking-time-value" *ngIf = changeColorEasy(location.difficolta) style = "color: green" > {{location.difficolta}} </span>
           <span class="cooking-time-value" *ngIf = changeColorMedium(location.difficolta) style = "color: orange" > {{location.difficolta}} </span>
           <span class="cooking-time-value" *ngIf = changeColorHard(location.difficolta) style = "color: red" > {{location.difficolta}} </span>
+    
         </div>
-        <!--
-           {{location.descrizione}}
-          <table class= cointer-list>
-            <tr *ngFor="let i of location.Ingredienti">
-             <td load="splitArray(i)"> {{ i }} </td>
-             </tr>
-          </table>
-          -->
+        <!-- Bottone apri recipe    ion-button clear item-end -->
+        <button class="button" style="vertical-align:middle"   (click)="openPageRisposte(location.id)" ><span> Vai alla ricetta </span></button>
+        
       </ion-item>
     </ion-list>
   </ion-content> 
-
-
 
 

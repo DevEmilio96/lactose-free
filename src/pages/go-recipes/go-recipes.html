@@ -1,0 +1,39 @@
+<!--
+  Generated template for the GoRecipesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Torna alla lista delle ricette</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding >
+<div class="total">
+<h1 class = "entry-title"> {{ recipeName }} </h1>
+<div class= "foto-info">
+    <img class="foto" src="{{ urlImmagine }}"/>
+    <div class="info">
+      <h1 class="info-title" >Difficoltà:  <p class="info-sub">{{ difficolta }}</p> </h1> 
+      <h1 class="info-title"> Tempo di preparazione:  <p class="info-sub">{{ recipeTime }} min</p> </h1>  
+      <h1 class="info-title"> Dosi:  <p class="info-sub">{{ dosi }} persone</p> </h1>  
+      <div class="icon-lattosio"> 
+      <img src="assets/imgs/icon-lactose-free.png" style="width:50px; height:50px;">
+      <h1 class="lattosio"> Senza lattosio</h1>
+    </div>
+    </div>
+</div>
+<br>
+<div class="title-generale">
+ Ingredienti: <br>
+</div>
+<h2 class="ingredienti" *ngFor= "let i of this.Ingredienti " ><ul><li>{{ i }}</li></ul>   </h2>
+<h1 class= "title-generale"> Preparazione: </h1><br>
+<h2 class="preparazione"> {{ preparazione }} </h2>
+<div class="fine-bordo"></div>
+</div>
+</ion-content>

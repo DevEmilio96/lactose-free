@@ -24,6 +24,7 @@ import { ENV } from '../config/env';
 import { RecipesPageComponent } from '../pages/recipes/recipes';
 import { RecipesProvider } from '../providers/service/recipesService';
 import { CercaPageComponent } from '../pages/cerca/cerca'
+import { GoRecipesPageComponent } from '../pages/go-recipes/go-recipes';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CercaPageComponent } from '../pages/cerca/cerca'
     HeaderEsComponent,
     FooterEsComponent,
     RecipesPageComponent,
-    CercaPageComponent
+    CercaPageComponent,
+    GoRecipesPageComponent,
 
   ],
   imports: [
@@ -54,7 +56,8 @@ import { CercaPageComponent } from '../pages/cerca/cerca'
     RegistrationPageComponent,
     GalleriaPageComponent,
     RecipesPageComponent,
-    CercaPageComponent
+    CercaPageComponent,
+    GoRecipesPageComponent,
   ],
   providers: [
     AngularFireAuth,
