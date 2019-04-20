@@ -1,0 +1,132 @@
+page-go-recipes {
+    .fixed-content {
+        background-color: cornflowerblue;
+      
+    }
+
+    .total{       
+      background-color: white; 
+        margin-left: 15%;
+        margin-right: 15%;
+	    padding: 0;
+        position: absolute;
+        width:70%;
+        height: auto;
+        display: inline-block;
+        margin-bottom: 16px;
+        box-shadow: 5px 10px 18px black ; 
+        border: 2px solid;
+
+        
+       /*  margin:10%;
+        margin-top: 5%;
+        padding-top: 1%;
+        padding-bottom: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+        border: 2px rgb(37, 36, 36) solid;
+      box-shadow: 5px 10px 18px #4b4a4a;
+      background-color: whitesmoke;*/
+      
+
+      
+      
+    }
+
+    .entry-title{
+        font-size:50px;
+        font-family: ultra_regular,Georgia,serif;
+        margin-bottom: 20px;
+        font-weight: 500;
+        line-height: 1.1;
+        color: black;
+        font-weight: bold;    
+        background-color: #f4631e;
+        padding-top: 4%;
+        padding-left: 1%;
+        padding-bottom: 4%;
+        border-top: 2px solid;
+        border-bottom: 2px solid;
+    }
+
+    .foto-info{
+	    padding-top: 3em;
+        position: relative;
+        padding-bottom: 2em;
+        display: inline-block;
+    }  
+    .foto{
+       float:left;
+       width: 70%; 
+       border-top: 4px solid black;
+       border-right: 4px solid black;
+       border-bottom: 4px solid black;     
+    }
+    .info{
+        font-family:  ultra_regular,Georgia,serif;
+        float:left;
+        width:30%;
+        padding-top: 5%;
+        padding-left: 2%;
+        display: inline-block;
+	  //  top: 5em;
+	   // padding-left: 72%; /* che è la larghezza del primo elemento */
+    }
+    .info-title{
+        color: cornflowerblue;
+        font-family: ultra_regular,Georgia,serif
+    }
+    .info-sub{
+        display:inline-block;
+        color: black;
+        font-size:20px;
+    }
+    .icon-lattosio{
+        border-radius: 3px;
+        background-color: #f4631e;
+        padding: 15px 15px 10px;
+        
+        display: inline-block;
+        bottom: 5%;
+        
+        position:absolute;
+        
+    }
+    .lattosio{
+        border-radius: 3px;
+        background-color: #f4631e;
+        padding: 15px 15px 10px;
+        margin: auto 0 0;
+        float: right;
+    }
+    
+    .title-generale{     
+        padding-left: 1%;
+        color: cornflowerblue;
+        font-size:40px;
+        font-family: ultra_regular,Georgia,serif;
+        font-weight: 500;
+        line-height: 1.1;
+        font-weight: bold;    
+    }
+    .ingredienti{
+        display: inline-block;
+        font-family:  ultra_regular,Georgia,serif;
+        width: 33%;
+        padding-left: 2%;  
+    }
+
+    .preparazione{
+        font-family:  ultra_regular,Georgia,serif;
+        padding-left: 4%;
+        margin-top:0;
+        line-height: 2.5;
+        width:96%;
+        margin-bottom: -3%;
+    }
+    .fine-bordo{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    //    background: linear-gradient(white, #f4631e); 
+    }
+}

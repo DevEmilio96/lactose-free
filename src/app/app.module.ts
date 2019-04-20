@@ -26,6 +26,7 @@ import { RecipesProvider } from '../providers/service/recipesService';
 import { CercaPageComponent } from '../pages/cerca/cerca';
 import { CercaService } from '../providers/service/CercaService';
 import { NewsPageComponent } from '../pages/news/news';
+import { GoRecipesPageComponent } from '../pages/go-recipes/go-recipes';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NewsPageComponent } from '../pages/news/news';
     HeaderEsComponent,
     FooterEsComponent,
     RecipesPageComponent,
-    CercaPageComponent
+    CercaPageComponent,
+    GoRecipesPageComponent,
 
   ],
   imports: [
@@ -58,7 +60,8 @@ import { NewsPageComponent } from '../pages/news/news';
     RegistrationPageComponent,
     GalleriaPageComponent,
     RecipesPageComponent,
-    CercaPageComponent
+    CercaPageComponent,
+    GoRecipesPageComponent,
   ],
   providers: [
     AngularFireAuth,

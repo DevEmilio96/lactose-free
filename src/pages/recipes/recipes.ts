@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RecipesProvider } from '../../providers/service/recipesService';
 import { reduce } from 'rxjs/operators';
+import { GoRecipesPageComponent } from '../go-recipes/go-recipes';
 
 /**
  * Generated class for the RecipesPage page.
@@ -54,24 +55,10 @@ export class RecipesPageComponent {
        .catch();
  }
 
-
-  splitArray( arrayIniziale : Array<any>) {
-     var n = arrayIniziale.length;
-      if(n % 2 == 0){
-        for(let i=0; i<arrayIniziale.length; i++ ){
-          if(i < arrayIniziale.length/2 ){
-            this.primoArray[i] = arrayIniziale[i];
-          }else this.secondoArray[i] = arrayIniziale[i];
-        }
-      } else if(n %2 !=0) {
-        for(let i=0; i<arrayIniziale.length; i++ ){
-          if(i < (arrayIniziale.length/2)+1 ){
-            this.primoArray[i] = arrayIniziale[i];
-          }else this.secondoArray[i] = arrayIniziale[i];
-      }
-
-      }
-  }
+ openPageRisposte(location: any) {
+  localStorage.setItem("locationId", location);
+  this.navCtrl.push(GoRecipesPageComponent);
+}
 
   changeColorEasy(difficolta : string){
     if (difficolta.localeCompare("facile")==0)
