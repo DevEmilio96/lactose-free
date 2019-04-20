@@ -5,22 +5,19 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>cerca</ion-title>
-  </ion-navbar>
+  <header-es [title]="title"></header-es>
 
 </ion-header>
 <!-- -->
 
 <ion-content padding>
   <form [formGroup]='form' (ngSubmit)='searchProduct(form.value)' (ngSubmit)='presentAlert()' class="form">
-
+   <div class = "form-container" >
     <ion-item>
       <ion-label floating color="primary"> Cerca un prodotto e controlla se contiene lattosio </ion-label>
       <ion-input type="text" class="form-controll" formControlName='Titolo' [(ngModel)]='Titolo'></ion-input>
     </ion-item>
-
+  </div>
   </form>
   <table class="blueTable"  *ngIf = "tableCheck">
     <thead>

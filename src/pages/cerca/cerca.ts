@@ -16,6 +16,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: 'cerca.html',
 })
 export class CercaPageComponent {
+  title: string = "Cerca";
   locations: any;
   form: any;
   cerca: String;
@@ -27,6 +28,7 @@ export class CercaPageComponent {
   tempintolleranza = new Array;
   lunghezzaElementiCercati = new Array;
   tableCheck: boolean;
+  
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private DBistance: CercaService,
