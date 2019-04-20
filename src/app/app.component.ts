@@ -9,6 +9,7 @@ import { RecipesPageComponent } from '../pages/recipes/recipes';
 import { RegistrationPageComponent } from '../pages/registration/registration';
 import firebase from 'firebase';
 import { AccountService } from '../providers/service/accountService';
+import { NewsPageComponent } from '../pages/news/news';
 
 @Component({
   templateUrl: 'app.html'
@@ -37,7 +38,7 @@ export class MyAppComponent {
       { title: 'Home', component: HomePage },
       { title: 'Login', component: LoginPage },
       { title: 'Registrazione', component: RegistrationPageComponent },
-      { title: 'Ricette', component: RecipesPageComponent }
+      { title: 'Ricette', component: RecipesPageComponent },
     ];
 
   }
@@ -129,6 +130,7 @@ export class MyAppComponent {
     this.pages = [
       { title: 'Login', component: LoginPage},
       { title: 'Home', component: HomePage },
+      { title: 'News', component: NewsPageComponent },
     ];
   }
 

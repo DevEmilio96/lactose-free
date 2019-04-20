@@ -5,13 +5,14 @@ import { RegistrationPageComponent } from '../registration/registration';
 import { RecipesPageComponent } from '../recipes/recipes';
 import { GalleriaPageComponent } from '../galleria/galleria';
 import { CercaPageComponent } from '../cerca/cerca';
+import { NewsPageComponent } from '../news/news';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  tab1Root = LoginPage;
+  tab1Root = NewsPageComponent;
   tab3Root = RecipesPageComponent;
   tab2Root = GalleriaPageComponent;
   tab4Root = CercaPageComponent;

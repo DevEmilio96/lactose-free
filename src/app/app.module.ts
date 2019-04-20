@@ -24,12 +24,14 @@ import { ENV } from '../config/env';
 import { RecipesPageComponent } from '../pages/recipes/recipes';
 import { RecipesProvider } from '../providers/service/recipesService';
 import { CercaPageComponent } from '../pages/cerca/cerca';
-import { CercaService } from '../providers/service/CercaService'
+import { CercaService } from '../providers/service/CercaService';
+import { NewsPageComponent } from '../pages/news/news';
 
 @NgModule({
   declarations: [
     MyAppComponent,
     HomePage,
+    NewsPageComponent,
     LoginPage,
     RegistrationPageComponent,
     GalleriaPageComponent,
@@ -50,6 +52,7 @@ import { CercaService } from '../providers/service/CercaService'
   bootstrap: [IonicApp],
   entryComponents: [
     MyAppComponent,
+    NewsPageComponent,
     HomePage,
     LoginPage,
     RegistrationPageComponent,
