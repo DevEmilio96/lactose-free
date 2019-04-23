@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { CercaService } from '../../providers/service/CercaService';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 /**
  * Generated class for the CercaPage page.
@@ -35,7 +35,7 @@ export class CercaPageComponent {
     private _FB: FormBuilder,
     private alertCtrl: AlertController) {
     this.form = this._FB.group({
-      'Titolo': ['', Validators.required],
+      Titolo: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.pattern('^[a-zA-Z0-9]+$')])],
     });
     this.alertNuovaRecensione = false;
     this.tableCheck = false;
@@ -58,8 +58,23 @@ export class CercaPageComponent {
       })
       .catch();
   }
+  
+  private markFormGroupTouched(formGroup: FormGroup) {
+    (<any>Object).values(formGroup.controls).forEach(control => {
+        control.markAsTouched();
+
+        if (control.controls) {
+            this.markFormGroupTouched(control);
+        }
+    });
+}
 
   searchProduct(): void {
+    if (this.form.status == "INVALID") {
+      this.markFormGroupTouched(this.form);
+      console.log("Form Invalido:", this.form)
+      return;
+  }
     this.tempnome = new Array;
     this.tempintolleranza = new Array;
     this.tableCheck = false;

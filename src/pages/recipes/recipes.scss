@@ -1,10 +1,10 @@
 page-recipes {
     .fixed-content {
-        background-color: cornflowerblue;
+        background-color: white;
     }
     .recipe-name{
         color: color($colors, primary, base);
-        color: cornflowerblue;
+        color: #2672A3;
         font-weight: bold;
         font-size: 22pt;
         font-family: ultra_regular,Georgia,serif;
@@ -20,8 +20,8 @@ page-recipes {
         font-size: 10pt;
     }
     .bord-img{
-        border: 3px solid cornflowerblue;
-        box-shadow: 10px 10px 5px #dedede;
+        //border: 3px solid #2672A3;
+       // box-shadow: 10px 10px 5px #dedede;
         
     }
     .ricette { 
@@ -54,7 +54,7 @@ page-recipes {
         float: right;
         display: inline-block;
         border-radius: 4px;
-        background-color: #f4511e;
+        background-color: #2672A3;
         border: none;
         color: #FFFFFF;
         text-align: center;
@@ -94,6 +94,9 @@ page-recipes {
       }
       .button .item-button .button-md .button-clear .button-clear-md{
         background-color: black;
+      }
+      .contenitoreGen{
+        padding-top: 2%;
       }
       
    

@@ -17,7 +17,7 @@ import { GoRecipesPageComponent } from '../go-recipes/go-recipes';
   templateUrl: 'recipes.html',
 })
 export class RecipesPageComponent {
-
+  title: string = "Ricette";
     /**
    * @name _COLL
    * @type {string}
