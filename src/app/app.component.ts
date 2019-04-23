@@ -10,6 +10,7 @@ import { RegistrationPageComponent } from '../pages/registration/registration';
 import firebase from 'firebase';
 import { AccountService } from '../providers/service/accountService';
 import { NewsPageComponent } from '../pages/news/news';
+import { ProssimamentePageComponent } from '../pages/prossimamente/prossimamente';
 
 @Component({
   templateUrl: 'app.html'
@@ -99,7 +100,10 @@ export class MyAppComponent {
         if (verified == true) {
 
           this.pages = [
-            { title: 'Home', component: HomePage },
+            { title: 'Contatti', component: ProssimamentePageComponent },
+            { title: 'Segnala', component: ProssimamentePageComponent },
+            { title: 'Impostazioni', component: ProssimamentePageComponent },
+            { title: 'Info', component: ProssimamentePageComponent },
           ];
         }
 
@@ -108,6 +112,7 @@ export class MyAppComponent {
 
           this.pages = [
             { title: 'Home', component: HomePage },
+            
           ];
         }
 
@@ -130,7 +135,8 @@ export class MyAppComponent {
     this.pages = [
       { title: 'Login', component: LoginPage},
       { title: 'Home', component: HomePage },
-      { title: 'News', component: NewsPageComponent },
+   
+    
     ];
   }
 

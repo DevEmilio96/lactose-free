@@ -27,9 +27,11 @@ import { CercaPageComponent } from '../pages/cerca/cerca';
 import { CercaService } from '../providers/service/CercaService';
 import { NewsPageComponent } from '../pages/news/news';
 import { GoRecipesPageComponent } from '../pages/go-recipes/go-recipes';
+import { ProssimamentePageComponent } from '../pages/prossimamente/prossimamente';
 
 @NgModule({
   declarations: [
+    ProssimamentePageComponent,
     MyAppComponent,
     HomePage,
     NewsPageComponent,
@@ -53,6 +55,7 @@ import { GoRecipesPageComponent } from '../pages/go-recipes/go-recipes';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    ProssimamentePageComponent,
     MyAppComponent,
     NewsPageComponent,
     HomePage,
