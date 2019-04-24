@@ -17,10 +17,11 @@ import { HomePage } from '../home/home';
 })
 export class ProssimamentePageComponent {
   alertNuovaRecensione: boolean;
-
+  upload: boolean = true;
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private alertCtrl: AlertController) {
+      
       this.alertNuovaRecensione=false;
       this.presentAlert();
       this.navCtrl.setRoot(HomePage, null , {

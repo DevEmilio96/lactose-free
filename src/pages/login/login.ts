@@ -12,6 +12,7 @@ import { HomePage } from '../home/home';
 	templateUrl: 'login.html',
 })
 export class LoginPage {
+	upload: boolean = true;
 	loginForm: FormGroup;
 	loginError: string;
 	constructor(

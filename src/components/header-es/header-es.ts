@@ -13,7 +13,8 @@ import { Component, Input } from '@angular/core';
 export class HeaderEsComponent {
 
   @Input() title: string;
-
+  @Input() upload: boolean;
+  @Input() ceckupload: boolean;
   constructor() {
     console.log("Titolo:",this.title)
   }

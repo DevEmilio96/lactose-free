@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewsPageComponent {
   title: string = "Home";
-
+  upload: boolean = true;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

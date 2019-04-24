@@ -39,7 +39,30 @@ page-cerca {
       table.blueTable thead th:first-child {
         border-left: none;
       }
-      
+      .searchbar-input-container{
+        border-radius: 10px !important;
+      }
+      ion-searchbar{        
+        .searchbar-input-container{            
+            .searchbar-input{
+                border-radius: 20px;
+                background: white;
+                color: #6495ED;
+                width: 50%;
+                margin-left:25%;
+            }
+        }
+     }
+     .searchbar-md .searchbar-clear-icon{
+        margin-right: 25%;
+     }
+     .searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel{
+       margin-left: 25%;
+     }
+     
+  
+
+
       table.blueTable tfoot {
         font-size: 14px;
         font-weight: bold;
@@ -63,7 +86,7 @@ page-cerca {
         padding: 2px 8px;
         border-radius: 5px;
       }
-
+      
       .form-container{
         width : 40%;
         margin-left: 30%;
