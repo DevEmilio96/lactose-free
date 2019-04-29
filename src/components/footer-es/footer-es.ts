@@ -10,7 +10,7 @@ export class FooterEsComponent {
 
   constructor() {
     console.log('Hello FooterEsComponent Component');
-    this.text = 'Erasmus Smart - Enterprise 2018';
+    this.text = 'Lactose Free - Enterprise 2018';
   }
 
 }
