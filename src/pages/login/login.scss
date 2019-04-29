@@ -5,6 +5,10 @@ page-login {
         background-color: cornflowerblue;
     }
 
+    form, input, optgroup, select{
+        margin-top:10px;
+    }
+
     .item {
 
         max-width: 50% !important;
