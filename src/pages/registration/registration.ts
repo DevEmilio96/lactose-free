@@ -14,7 +14,8 @@ import { HomePage } from '../home/home';
 	templateUrl: './registration.html'
 })
 export class RegistrationPageComponent {
-
+	upload: boolean = true;
+	all: boolean = true;
 	signupError: string;
 	form: FormGroup;
 	public gender: any;

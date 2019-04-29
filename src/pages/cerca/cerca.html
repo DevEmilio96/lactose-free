@@ -5,20 +5,21 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <header-es [title]="title"></header-es>
-
+  <header-es [title]="title" [upload]="upload"></header-es>
 </ion-header>
 <!-- -->
 
 <ion-content padding>
-  <form [formGroup]='form' (ngSubmit)='searchProduct(form.value)' (ngSubmit)='presentAlert()' class="form">
+    <ion-searchbar value="string" type ="text" (ionChange)="searchProduct($event)" class="search-bar-style" color="light"  animated placeholder="Inserisci un alimento. ES:-'gocciole' "></ion-searchbar>
+ <!-- <form [formGroup]='form' (ngSubmit)='searchProduct(form.value)' (ngSubmit)='presentAlert()' class="form">
    <div class = "form-container" >
     <ion-item>
       <ion-label floating color="primary"> Cerca un prodotto e controlla se contiene lattosio </ion-label>
+      
       <ion-input type="text" class="form-controll" formControlName='Titolo' [(ngModel)]='Titolo' required ></ion-input>
     </ion-item>
   </div>
-  </form>
+  </form>-->
   <table class="blueTable"  *ngIf = "tableCheck">
     <thead>
       <tr>

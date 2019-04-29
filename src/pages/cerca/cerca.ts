@@ -16,6 +16,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
   templateUrl: 'cerca.html',
 })
 export class CercaPageComponent {
+  upload: boolean = true;
   title: string = "Cerca";
   locations: any;
   form: any;
@@ -28,15 +29,16 @@ export class CercaPageComponent {
   tempintolleranza = new Array;
   lunghezzaElementiCercati = new Array;
   tableCheck: boolean;
-  
+
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private DBistance: CercaService,
     private _FB: FormBuilder,
     private alertCtrl: AlertController) {
-    this.form = this._FB.group({
+    /*this.form = this._FB.group({
       Titolo: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.pattern('^[a-zA-Z0-9]+$')])],
-    });
+    });*/
     this.alertNuovaRecensione = false;
     this.tableCheck = false;
 
@@ -58,31 +60,29 @@ export class CercaPageComponent {
       })
       .catch();
   }
-  
+
   private markFormGroupTouched(formGroup: FormGroup) {
     (<any>Object).values(formGroup.controls).forEach(control => {
-        control.markAsTouched();
+      control.markAsTouched();
 
-        if (control.controls) {
-            this.markFormGroupTouched(control);
-        }
+      if (control.controls) {
+        this.markFormGroupTouched(control);
+      }
     });
-}
+  }
 
-  searchProduct(): void {
-    if (this.form.status == "INVALID") {
+  searchProduct(evento): void {
+   /* if (this.form.status == "INVALID") {
       this.markFormGroupTouched(this.form);
       console.log("Form Invalido:", this.form)
       return;
-  }
+    }*/
     this.tempnome = new Array;
     this.tempintolleranza = new Array;
     this.tableCheck = false;
-    this.cerca = this.form.controls["Titolo"].value;
+    this.cerca = evento.value;
+    console.log(evento.value)
     this.controllaLunghezza = this.cerca.length;
-    console.log(this.cerca + "parola cercata ");
-    console.log(this.controllaLunghezza + "  lunghezza elemento cercato")
-    console.log(this.locations[0].nome + "  this.locations[0].nome ")
     var str: String;
 
     for (let i = 0; i < this.locations.length; i++) {
@@ -96,15 +96,20 @@ export class CercaPageComponent {
           intolleranza: this.tempintolleranza,
         }
         console.log(this.elementiCercati.nome + "coppie di valori cercati" + this.elementiCercati.intolleranza)
-        this.tableCheck = true;
+        if(this.cerca.length>0){
+          this.tableCheck = true;
+        }
+     
         this.alertNuovaRecensione = true;
       }
     }
+    if(this.elementiCercati != undefined ){
     for (let i = 0; i < this.elementiCercati.nome.length; i++) {
       this.lunghezzaElementiCercati[i] = i;
     }
-
   }
+  }
+
   presentAlert() {
     if (this.alertNuovaRecensione == true) {
       let alert = this.alertCtrl.create({

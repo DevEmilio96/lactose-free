@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams, ItemSliding } from 'ionic-angular'
 })
 export class GalleriaPageComponent {
   title: string = "Galleria";
+  upload: boolean = true;
+  ceckupload: boolean = true;
   immagine:string;
   descrizione: string;
 itemsettage1 : Array<any> = [

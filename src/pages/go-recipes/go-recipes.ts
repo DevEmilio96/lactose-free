@@ -15,6 +15,8 @@ import { RecipesProvider } from '../../providers/service/recipesService';
   templateUrl: 'go-recipes.html',
 })
 export class GoRecipesPageComponent {
+
+  upload: boolean = true;
   title: string = "Ricette";
   locationId: string;
   locations: any;

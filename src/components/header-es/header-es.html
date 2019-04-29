@@ -1,10 +1,25 @@
-<ion-navbar>
+<ion-navbar *ngIf="upload">
   <button id="ButtonMenu" ion-button large menuToggle color="bule">
     <ion-icon large name="menu"></ion-icon>
   </button>
-  <p style="max-width: 100px;margin-bottom: 0px;position: absolute;margin-top: 17px;font-size: 25px;color: #2672A3;">{{ title }}</p>
+  <p style="max-width: 100px;margin-bottom: 0px;position: absolute;margin-top: 17px;font-size: 25px;color: #2672A3;">
+    {{ title }}</p>
   <div style="text-align: center">
-    <img style="height:60px;" src="../assets/imgs/logo.png"/>
+    
+    <img  src="../assets/imgs/logo.png" class="logo"/>
+
+    <div class="Bottone-Ombra" *ngIf="ceckupload" >
+
+      <div *ngIf="upload" class="prova" >
+        <img src="assets/imgs/upload-arrow.png" alt="Avatar" class="image">
+      </div>
+      <div class="carica-text" *ngIf="upload">
+        <p>Click for Upload</p>
+      </div>
+
+    </div>
+
   </div>
-  
-</ion-navbar>
+
+</ion-navbar >
+

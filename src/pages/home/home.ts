@@ -12,6 +12,7 @@ import { NewsPageComponent } from '../news/news';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  upload: boolean = true;
   tab1Root = NewsPageComponent;
   tab3Root = RecipesPageComponent;
   tab2Root = GalleriaPageComponent;
