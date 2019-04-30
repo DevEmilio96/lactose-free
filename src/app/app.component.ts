@@ -28,10 +28,10 @@ export class MyAppComponent {
   //list of pages
   pages: Array<{ title: string, component: any }>;
 
-  constructor(public platform: Platform, 
-              public statusBar: StatusBar, 
-              public splashScreen: SplashScreen,
-              public accountService: AccountService) {
+  constructor(public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public accountService: AccountService) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -52,16 +52,16 @@ export class MyAppComponent {
 
   loginLogic() {
 
-      //set logged variable
-      this.accountService.afAuth.authState
+    //set logged variable
+    this.accountService.afAuth.authState
       .subscribe(
         user => {
-              
-          console.log("authenticated",user);
-    
+
+          console.log("authenticated", user);
+
           //user logged
           if (user != null) {
-          
+
             this.logged = true;
 
             //user logged & verified
@@ -77,11 +77,11 @@ export class MyAppComponent {
               this.verified = false;
               this.userIsLogged(this.verified);
             }
-          }  
-            
+          }
+
           //user unlogged
           else {
-            
+
             this.logged = false;
             this.userIsNotLogged();
           }
@@ -94,36 +94,36 @@ export class MyAppComponent {
     this.rootPage = HomePage;
     this.loggedEmail = firebase.auth().currentUser.email;
 
-  
-        
-        //verified
-        if (verified == true) {
 
-          this.pages = [
-            { title: 'Contatti', component: ProssimamentePageComponent },
-            { title: 'Segnala', component: ProssimamentePageComponent },
-            { title: 'Impostazioni', component: ProssimamentePageComponent },
-            { title: 'Info', component: ProssimamentePageComponent },
-          ];
-        }
 
-        //not verified
-        else if (verified == false) {
+    //verified
+    if (verified == true) {
 
-          this.pages = [
-            { title: 'Home', component: HomePage },
-            
-          ];
-        }
+      this.pages = [
+        { title: 'Contatti', component: ProssimamentePageComponent },
+        { title: 'Segnala', component: ProssimamentePageComponent },
+        { title: 'Impostazioni', component: ProssimamentePageComponent },
+        { title: 'Info', component: ProssimamentePageComponent },
+      ];
+    }
 
-        //error
-        else {
+    //not verified
+    else if (verified == false) {
 
-          this.userIsNotLogged();
-          this.logout();
-        }
-      }
- 
+      this.pages = [
+        { title: 'Home', component: HomePage },
+
+      ];
+    }
+
+    //error
+    else {
+
+      this.userIsNotLogged();
+      this.logout();
+    }
+  }
+
 
 
   userIsNotLogged() {
@@ -131,12 +131,11 @@ export class MyAppComponent {
     this.rootPage = LoginPage;
     this.verified = false;
     this.loggedEmail = "Guest@erasmussmart.org";
-        
+
     this.pages = [
-      { title: 'Login', component: LoginPage},
-      { title: 'Home', component: HomePage },
-   
-    
+      { title: 'Login', component: LoginPage },
+
+
     ];
   }
 

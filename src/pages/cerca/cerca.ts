@@ -90,7 +90,13 @@ export class CercaPageComponent {
 
       if (this.cerca.localeCompare(str.substring(0, this.controllaLunghezza)) == 0) {
         this.tempnome.push(this.locations[i].nome)
-        this.tempintolleranza.push(this.locations[i].intolleranza)
+        
+        if(this.locations[i].intolleranza == true){
+          this.tempintolleranza.push("Si")
+        }else {
+          this.tempintolleranza.push("No")
+        }
+
         this.elementiCercati = {
           nome: this.tempnome,
           intolleranza: this.tempintolleranza,
