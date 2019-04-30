@@ -3,17 +3,18 @@
 	  </ion-header>
   
 	<ion-content padding>
+		<div class="tutto">
 		<form (ngSubmit)="login()" [formGroup]="loginForm">
 			<ion-list>
 			<ion-item>
-				<ion-icon name="contact" item-start></ion-icon>
-				<ion-label fixed>E-Mail</ion-label>
+				<ion-icon name="contact" style="color:#2672A3" item-start></ion-icon>
+				<ion-label fixed style="color:black">E-Mail:</ion-label>
 				<ion-input type="text" name="email" required formControlName="email" id="email"></ion-input>
 			</ion-item>
 		
 			<ion-item>
-				<ion-icon name="lock" item-start></ion-icon>
-				<ion-label fixed>Password</ion-label>
+				<ion-icon name="lock" style="color:#2672A3" item-start ></ion-icon>
+				<ion-label fixed style="color:black">Password:</ion-label>
 				<ion-input type="password" name="password" required formControlName="password" id="pass"></ion-input>
 			</ion-item>
 			</ion-list>
@@ -22,18 +23,19 @@
 				<div class="form-error" style="color:red">{{ loginError }}</div>
 
 				<button ion-button round large icon-start id="loginButton" type="submit">
-					<ion-icon name="checkmark-circle-outline"></ion-icon>
-					Login
+					<ion-icon style="color:white"  name="checkmark-circle-outline"></ion-icon>
+					<p style="color:White">Login</p>
 				</button>
 			</div>
 				
 			<ion-list>
-				<button ion-button large icon-start block clear color="es_white" (click)="signup()" id="regButton">
-					<ion-icon name="person-add"></ion-icon>
-					Sign up
+				<button ion-button large icon-start block clear color="red" (click)="signup()" id="regButton">
+					<ion-icon name="person-add" style="color:#2672A3"></ion-icon>
+					<p style="color:#2672A3">Sign up</p>
 				</button>
 			</ion-list>
 		</form>
+	</div>
 	</ion-content>
   
 

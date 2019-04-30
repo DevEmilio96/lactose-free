@@ -2,7 +2,7 @@ page-login {
 
     .fixed-content {
 
-        background-color: #2672A3;
+        background-color: white;
     }
     .button-inner{
         color: black;
@@ -25,12 +25,24 @@ page-login {
 
     #loginButton {
 
-        background: #f5f5f5;
-        color: cornflowerblue;
+        background: #2672A3;
+        color: white;
     }
 
     #notRegistredDivLogin {
 
         text-align: center;
     }
+    .tutto{
+        background-color: whitesmoke;
+        width: 60%;
+        box-shadow: 5px 10px 18px #4b4a4a;
+        margin-left: 20%;
+        padding-top: 3em;
+        margin-top: 3em;
+        border: none !important;
+    }
+
+    
+
 }
