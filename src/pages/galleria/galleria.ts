@@ -22,12 +22,12 @@ export class GalleriaPageComponent {
 itemsettage1 : Array<any> = [
   "assets/imgs/Torta-ricotta-e-pere.jpg",
   "assets/imgs/ricotta.jpg",
-  "assets/imgs/Torta-al-latte.jpg",
+  "assets/imgs/torta-al-latte.jpg",
 ]
 itemsettage2 : Array<any> = [
   "assets/imgs/formaggio.jpg",
   "assets/imgs/tiramisu.jpg",
-  "assets/imgs/Torta-di-riso.jpg",
+  "assets/imgs/torta-di-riso.jpg",
 ]
 itemsettage3 : Array<any> = [
   "assets/imgs/zuppa-zucca-latte.jpg",
