@@ -101,6 +101,8 @@ export class CercaPageComponent {
         }
      
         this.alertNuovaRecensione = true;
+       
+     
       }
     }
     if(this.elementiCercati != undefined ){
@@ -108,6 +110,7 @@ export class CercaPageComponent {
       this.lunghezzaElementiCercati[i] = i;
     }
   }
+
   }
 
   presentAlert() {

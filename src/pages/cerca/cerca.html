@@ -10,7 +10,7 @@
 <!-- -->
 
 <ion-content padding>
-    <ion-searchbar value="string" type ="text" (ionChange)="searchProduct($event)" class="search-bar-style" color="light"  animated placeholder="Inserisci un alimento. ES:-'gocciole' "></ion-searchbar>
+    <ion-searchbar value="string" type ="text" autocomplete="on" (keyup.enter)='presentAlert()' (ionChange)="searchProduct($event)" class="search-bar-style" color="light"  animated placeholder="Inserisci un alimento. ES:-'gocciole' "></ion-searchbar>
  <!-- <form [formGroup]='form' (ngSubmit)='searchProduct(form.value)' (ngSubmit)='presentAlert()' class="form">
    <div class = "form-container" >
     <ion-item>
