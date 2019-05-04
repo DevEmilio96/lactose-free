@@ -131,7 +131,7 @@ export class CercaPageComponent {
     } else {
       let alert = this.alertCtrl.create({
         title: 'Errore',
-        subTitle: 'L ' + ' alimento non è disponibile nel catalogo',
+        subTitle: "L' alimento non è disponibile nel catalogo. Inserisci un nuovo alimento da ricercare.",
         buttons: ['Ok']
       });
       alert.present();
