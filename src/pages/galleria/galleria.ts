@@ -22,12 +22,12 @@ export class GalleriaPageComponent {
 itemsettage1 : Array<any> = [
   "assets/imgs/Torta-ricotta-e-pere.jpg",
   "assets/imgs/ricotta.jpg",
-  "assets/imgs/torta-al-latte.jpg",
+  "https://firebasestorage.googleapis.com/v0/b/lactose-free.appspot.com/o/torta-al-latte.jpg?alt=media&token=f1f11025-c3ae-460c-9667-1536a85b65c3",
 ]
 itemsettage2 : Array<any> = [
   "assets/imgs/formaggio.jpg",
   "assets/imgs/tiramisu.jpg",
-  "assets/imgs/torta-di-riso.jpg",
+  "https://firebasestorage.googleapis.com/v0/b/lactose-free.appspot.com/o/torta-di-riso.jpg?alt=media&token=5a2b40f3-0f00-403a-94ae-3008af008ee8",
 ]
 itemsettage3 : Array<any> = [
   "assets/imgs/zuppa-zucca-latte.jpg",
