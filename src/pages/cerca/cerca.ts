@@ -72,15 +72,18 @@ export class CercaPageComponent {
   }
 
   searchProduct(evento): void {
-   /* if (this.form.status == "INVALID") {
-      this.markFormGroupTouched(this.form);
-      console.log("Form Invalido:", this.form)
-      return;
-    }*/
+    /* if (this.form.status == "INVALID") {
+       this.markFormGroupTouched(this.form);
+       console.log("Form Invalido:", this.form)
+       return;
+     }*/
     this.tempnome = new Array;
     this.tempintolleranza = new Array;
     this.tableCheck = false;
+
+
     this.cerca = evento.value;
+    this.alertNuovaRecensione = false;
     console.log(evento.value)
     this.controllaLunghezza = this.cerca.length;
     var str: String;
@@ -90,10 +93,10 @@ export class CercaPageComponent {
 
       if (this.cerca.localeCompare(str.substring(0, this.controllaLunghezza)) == 0) {
         this.tempnome.push(this.locations[i].nome)
-        
-        if(this.locations[i].intolleranza == true){
+
+        if (this.locations[i].intolleranza == true) {
           this.tempintolleranza.push("Si")
-        }else {
+        } else {
           this.tempintolleranza.push("No")
         }
 
@@ -102,20 +105,21 @@ export class CercaPageComponent {
           intolleranza: this.tempintolleranza,
         }
         console.log(this.elementiCercati.nome + "coppie di valori cercati" + this.elementiCercati.intolleranza)
-        if(this.cerca.length>0){
+        if (this.cerca.length > 0) {
           this.tableCheck = true;
+
         }
-     
+
         this.alertNuovaRecensione = true;
-       
-     
+
+
+      } else this.alertNuovaRecensione = false;
+    }
+    if (this.elementiCercati != undefined) {
+      for (let i = 0; i < this.elementiCercati.nome.length; i++) {
+        this.lunghezzaElementiCercati[i] = i;
       }
     }
-    if(this.elementiCercati != undefined ){
-    for (let i = 0; i < this.elementiCercati.nome.length; i++) {
-      this.lunghezzaElementiCercati[i] = i;
-    }
-  }
 
   }
 
@@ -135,6 +139,7 @@ export class CercaPageComponent {
         buttons: ['Ok']
       });
       alert.present();
+      this.alertNuovaRecensione = false;
     };
   }
 
